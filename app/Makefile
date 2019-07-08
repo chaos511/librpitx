@@ -1,4 +1,4 @@
-all: testrpitx 
+all: x10_send 
 
 CFLAGS	= -Wall -g -O3 -Wno-unused-variable 
 LDFLAGS	= -lm -lrt -lpthread 
@@ -6,10 +6,10 @@ CCP = g++
 CC = gcc 
 
 
-testrpitx: testrpitx.cpp ../src/librpitx.h ../src/librpitx.a
+x10_send: x10_send.cpp ../src/librpitx.h ../src/librpitx.a
 	
-	$(CCP) $(CFLAGS) -o testrpitx testrpitx.cpp ../src/librpitx.a $(LDFLAGS) 
+	$(CCP) $(CFLAGS) -o x10_send x10_send.cpp ../src/librpitx.a $(LDFLAGS) 
 
 clean:
 	
-	rm -f  testrpitx
+	rm -f  x10_send
